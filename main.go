@@ -43,7 +43,7 @@ func main() {
             urlWriter.WriteString(strconv.Itoa(initialId + index))
             url := urlWriter.String()
 
-            fmt.Sprintf("Crawling %s\n", url)
+            fmt.Println(fmt.Sprintf("Crawling %s", url))
             bodyString := Crawler(url)
 
             lng, lat, found := Parse(bodyString)
